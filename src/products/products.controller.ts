@@ -23,7 +23,7 @@ export class ProductsController {
   }
 
   //@Get(':id')
-  @MessagePattern({cmd: 'find_product'})
+  @MessagePattern({cmd: 'find_one_product'})
   findOne(@Payload('id') id: string) {
     return this.productsService.findOne(+id);
   }
